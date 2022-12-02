@@ -3,6 +3,8 @@ const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
 const pattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]/;
 
+
+
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
     const username = loginForm.username.value;
@@ -18,8 +20,8 @@ loginButton.addEventListener("click", (e) => {
                 console.log(pattern.test(String(password)))
                 if (pattern.test(password)){
                     console.log("login worked");
-                    alert("you have successfully logged in");
-                    location.reload();
+                    //alert("you have successfully logged in");
+                    location.replace('index.html');
                 }
                 else{loginErrorMsg.style.opacity = 1;}
             }
